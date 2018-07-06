@@ -21,5 +21,29 @@ namespace VivoKey.WindowsFormsApp
         {
 
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void showToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Show();
+        }
+
+        private void Form1_Move(object sender, EventArgs e)
+        {
+            if(this.WindowState == FormWindowState.Minimized)
+            {
+                this.Hide();
+                notifyIcon1.ShowBalloonTip(1000, "Chip Validation", "Your chip has been verified", ToolTipIcon.Info);
+            }
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }
